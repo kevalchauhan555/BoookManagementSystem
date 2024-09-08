@@ -1,0 +1,21 @@
+<%layout("./layout/layout.ejs")%>
+<h2>Users List</h2>
+
+<table class="table table-hover table-striped-columns mt-5">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>User ID</th>
+            <th>Mobile Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(user => { %>
+            <tr>
+                <td><%= user.userName %></td>
+                <td><%=user.userId%></td>
+                <td><%=user.mobile%></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

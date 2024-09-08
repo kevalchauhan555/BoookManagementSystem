@@ -1,0 +1,45 @@
+<%layout("./layout/layout.ejs")%>
+<br>
+<h2>Books List</h2>
+<br>
+<!-- Search Form -->
+<form action="/books/search" method="get">
+    <input type="text" name="term" placeholder="Search books by term">
+    <button type="submit">Search</button>
+</form>
+<br>
+<!-- Rent Range Form -->
+<form action="/books/rent" method="get">
+    <input type="number" name="minRent" placeholder="Min Rent">
+    <input type="number" name="maxRent" placeholder="Max Rent">
+    <button type="submit">Filter by Rent Range</button>
+</form>
+<br>
+<!-- Advanced Search Form -->
+<form action="/books/all" method="get">
+    <input type="text" name="category" placeholder="Category">
+    <input type="text" name="term" placeholder="Name or Term">
+    <input type="number" name="minRent" placeholder="Min Rent">
+    <input type="number" name="maxRent" placeholder="Max Rent">
+    <button type="submit">Advanced Search</button>
+</form>
+
+<!-- Books Table -->
+<table class="table table-striped-columns mt-5">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Rent Per Day</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% books.forEach(book => { %>
+            <tr>
+                <td><%= book.bookName %></td>
+                <td><%= book.category %></td>
+                <td><%= book.rentperDay %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
