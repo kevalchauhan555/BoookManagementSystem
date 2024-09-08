@@ -4,23 +4,23 @@
 <br>
 <!-- Search Form -->
 <form action="/books/search" method="get">
-    <input type="text" name="term" placeholder="Search books by term">
+    <input type="text" name="term" placeholder="Search books by term" required>
     <button type="submit">Search</button>
 </form>
 <br>
 <!-- Rent Range Form -->
 <form action="/books/rent" method="get">
-    <input type="number" name="minRent" placeholder="Min Rent">
-    <input type="number" name="maxRent" placeholder="Max Rent">
+    <input type="number" name="minRent" placeholder="Min Rent" required>
+    <input type="number" name="maxRent" placeholder="Max Rent" required>
     <button type="submit">Filter by Rent Range</button>
 </form>
 <br>
 <!-- Advanced Search Form -->
 <form action="/books/all" method="get">
-    <input type="text" name="category" placeholder="Category">
-    <input type="text" name="term" placeholder="Name or Term">
-    <input type="number" name="minRent" placeholder="Min Rent">
-    <input type="number" name="maxRent" placeholder="Max Rent">
+    <input type="text" name="category" placeholder="Category" required>
+    <input type="text" name="term" placeholder="Name or Term" required>
+    <input type="number" name="minRent" placeholder="Min Rent" required>
+    <input type="number" name="maxRent" placeholder="Max Rent" required>
     <button type="submit">Advanced Search</button>
 </form>
 

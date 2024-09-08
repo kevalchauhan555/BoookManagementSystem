@@ -5,18 +5,18 @@
 
 <!-- Transaction Search Forms -->
 <form action="/transactions/book" method="get">
-    <input type="text" name="bookName" placeholder="Book Name">
+    <input type="text" name="bookName" placeholder="Book Name" required>
     <button type="submit">Search Book</button>
 </form>
 <br>
 <form action="/transactions/user" method="get">
-    <input type="text" name="userId" placeholder="User ID">
+    <input type="text" name="userId" placeholder="User ID" required>
     <button type="submit">Search User</button>
 </form>
 <br>
 <form action="/transactions/date-range" method="get">
-    <input type="date" name="startDate">
-    <input type="date" name="endDate">
+    <input type="date" name="startDate" required>
+    <input type="date" name="endDate" required>
     <button type="submit">Search by Date Range</button>
 </form>
 <%if(typeof(totalRentByBook) != "undefined"){%>
